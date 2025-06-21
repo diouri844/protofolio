@@ -1,37 +1,15 @@
 import React from 'react';
-import { BookOpen, Zap, Target, TrendingUp } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import currentFocus from '../utils/focus.provider';
 
-const Learning = () => {
-  const currentFocus = [
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: 'AI & Machine Learning',
-      description: 'Exploring TensorFlow.js, OpenAI APIs, and building intelligent applications',
-      progress: 75,
-      technologies: ['TensorFlow.js', 'OpenAI API', 'Python ML', 'LangChain']
-    },
-    {
-      icon: <Target className="h-6 w-6" />,
-      title: 'Web3 & Blockchain',
-      description: 'Deep diving into smart contracts, DeFi protocols, and decentralized applications',
-      progress: 60,
-      technologies: ['Solidity', 'Web3.js', 'DeFi', 'NFTs']
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Performance Optimization',
-      description: 'Advanced techniques for high-performance web applications and system design',
-      progress: 85,
-      technologies: ['WebAssembly', 'Service Workers', 'Edge Computing', 'CDN']
-    }
-  ];
-
-  const recentLearning = [
-    'Completed Advanced React Patterns course',
-    'Built microservices with event sourcing',
-    'Implemented OAuth 2.0 and OpenID Connect',
-    'Explored serverless architecture patterns',
-    'Studied system design for scalability'
+const Learning:React.FC = () => {
+  
+  const recentLearning:string[] = [
+    'Advanced scripting with Python for task automation',
+    'Built backend microservices with serverless and event-driven principles',
+    'Containerized services with Docker and deployed on AWS',
+    'Integrated GitHub Actions for CI/CD pipelines and deployment automation',
+    'Enhanced backend reliability with TDD and unit testing using NestJS and Java'
   ];
 
   return (
