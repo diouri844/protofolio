@@ -1,6 +1,18 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import myCV from '../assets/resume.pdf'; 
 
-const Hero = () => {
+
+
+
+const Hero:React.FC = () => {
+  const handleDownloadResume = (e:React.MouseEvent) => {
+    e.preventDefault();
+    console.log('Download Resume clicked');    
+    // open the resume in a new tab
+    window.open(myCV, '_blank', "noopener,noreferrer");
+    return ;
+  }
+
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -25,7 +37,9 @@ const Hero = () => {
               <span>View My Work</span>
               <ArrowRight className="h-5 w-5" />
             </button>
-            <button className="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 flex items-center space-x-2">
+            <button 
+            onClick={handleDownloadResume}
+            className="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 flex items-center space-x-2">
               <Download className="h-5 w-5" />
               <span>Download Resume</span>
             </button>
