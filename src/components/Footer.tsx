@@ -11,23 +11,21 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Code2 className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">John Developer</span>
+              <span className="text-xl font-bold">Diouri Salah Eddine</span>
             </div>
             <p className="text-slate-300 mb-6 max-w-md">
               Senior Software Developer passionate about creating innovative solutions 
               and sharing knowledge with the developer community.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a href="https://github.com/diouri844" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a href="https://www.linkedin.com/in/salah-eddine-diouri-a67402277/" 
+              className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a href="mailto:SalahEddine1914@outlook.com" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
@@ -48,7 +46,6 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-slate-300">
               <li>Web Development</li>
-              <li>Mobile Apps</li>
               <li>Technical Consulting</li>
               <li>Code Reviews</li>
               <li>Team Mentoring</li>
