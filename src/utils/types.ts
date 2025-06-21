@@ -16,4 +16,17 @@ type Project = {
     date: string;
 };
 
-export type { skillCategory, Project };
+
+
+type IntrestedArea = {
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    progress: number;
+    technologies: string[];
+};
+
+
+
+
+export type { skillCategory, Project, IntrestedArea };
