@@ -1,5 +1,5 @@
 
-import { Code, Database, Globe, Smartphone, Cloud, Wrench } from 'lucide-react';
+import { Code, Database, Globe, Cloud, Wrench } from 'lucide-react';
 import { skillCategory } from './types';
 
 const skillCategories:skillCategory[] = [
