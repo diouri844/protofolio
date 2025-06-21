@@ -1,39 +1,8 @@
 import React from 'react';
-import { Code, Database, Globe, Smartphone, Cloud, Wrench } from 'lucide-react';
+import skillCategories from '../utils/skils.provider';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      icon: <Code className="h-8 w-8" />,
-      title: 'Frontend Development',
-      skills: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'SASS/SCSS']
-    },
-    {
-      icon: <Database className="h-8 w-8" />,
-      title: 'Backend Development',
-      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis', 'GraphQL']
-    },
-    {
-      icon: <Cloud className="h-8 w-8" />,
-      title: 'Cloud & DevOps',
-      skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Nginx']
-    },
-    {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: 'Mobile Development',
-      skills: ['React Native', 'Flutter', 'iOS', 'Android', 'Expo', 'Progressive Web Apps']
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: 'Web Technologies',
-      skills: ['REST APIs', 'WebSockets', 'Microservices', 'OAuth', 'JWT', 'WebRTC']
-    },
-    {
-      icon: <Wrench className="h-8 w-8" />,
-      title: 'Tools & Workflow',
-      skills: ['Git', 'Webpack', 'Vite', 'Jest', 'Cypress', 'Figma']
-    }
-  ];
+const Skills:React.FC = () => {
+  
 
   return (
     <section id="skills" className="py-20 bg-white">
