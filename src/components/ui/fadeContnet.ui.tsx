@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, useState, ReactNode, useCallback } from "react";
 
 interface FadeContentProps {
   children: ReactNode;
@@ -23,8 +23,14 @@ const FadeContent: React.FC<FadeContentProps> = ({
 }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const handleScroll = useCallback(() => {
+    // No-op or logic if needed later
+  }, []);
+  
 
   useEffect(() => {
+    
+    window.addEventListener("scroll", handleScroll);
     const element = ref.current;
     if (!element) return;
 
@@ -41,9 +47,11 @@ const FadeContent: React.FC<FadeContentProps> = ({
     );
 
     observer.observe(element);
-
-    return () => observer.disconnect();
-  }, [threshold, delay]);
+    return () => {
+      observer.disconnect();
+      //window.removeEventListener("scroll", handleScroll);
+    };
+  }, [threshold, delay, handleScroll]);
 
   return (
     <div
