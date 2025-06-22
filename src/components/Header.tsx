@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 
-const Header = () => {
+const Header:React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -14,11 +14,11 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#learning', label: 'Learning' },
-    { href: '#contact', label: 'Contact' },
+    { href: 'about', label: 'About' },
+    { href: 'skills', label: 'Skills' },
+    { href: 'projects', label: 'Projects' },
+    { href: 'learning', label: 'Learning' },
+    { href: 'contact', label: 'Contact' },
   ];
 
   return (
@@ -34,13 +34,16 @@ const Header = () => {
 
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.href}
-                href={item.href}
+                onClick={() => {
+                  document.getElementById(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
                 className="text-slate-600 hover:text-blue-600 font-medium transition-colors duration-200"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </nav>
 
