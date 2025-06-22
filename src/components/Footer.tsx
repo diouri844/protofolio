@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Code2, Github, Heart, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,34 +13,77 @@ const Footer = () => {
               <span className="text-xl font-bold">Diouri Salah Eddine</span>
             </div>
             <p className="text-slate-300 mb-6 max-w-md">
-              Senior Software Developer passionate about creating innovative solutions 
-              and sharing knowledge with the developer community.
+              Senior Software Developer passionate about creating innovative
+              solutions and sharing knowledge with the developer community.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/diouri844" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="https://github.com/diouri844"
+                className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/in/salah-eddine-diouri-a67402277/" 
-              className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="https://www.linkedin.com/in/salah-eddine-diouri-a67402277/"
+                className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="mailto:SalahEddine1914@outlook.com" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="mailto:SalahEddine1914@outlook.com"
+                className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 <Mail className="h-6 w-6" />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">About</a></li>
-              <li><a href="#skills" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Skills</a></li>
-              <li><a href="#projects" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Projects</a></li>
-              <li><a href="#learning" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Learning</a></li>
-              <li><a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Contact</a></li>
+              <li>
+                <a
+                  href="#about"
+                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#learning"
+                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  Learning
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-slate-300">
@@ -51,10 +94,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 mb-4 md:mb-0">
-            © {currentYear} John Developer. All rights reserved.
+            © {currentYear} Diouri Salah eddine . All rights reserved.
           </p>
           <p className="text-slate-400 flex items-center space-x-1">
             <span>Made with</span>
