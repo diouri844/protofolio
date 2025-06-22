@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Github, Calendar } from 'lucide-react';
 import projects from '../utils/project.provider';
+import FadeContent from './ui/fadeContnet.ui';
 
 const Projects:React.FC = () => {
   
@@ -18,6 +19,7 @@ const Projects:React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
+            <FadeContent blur={true} duration={2500} easing="ease-out" initialOpacity={0.3}>       
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100"
@@ -71,6 +73,7 @@ const Projects:React.FC = () => {
                 </div>
               </div>
             </div>
+            </FadeContent>
           ))}
         </div>
       </div>

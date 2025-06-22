@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen } from 'lucide-react';
 import currentFocus from '../utils/focus.provider';
+import FadeContent from './ui/fadeContnet.ui';
 
 const Learning:React.FC = () => {
   
@@ -33,45 +34,47 @@ const Learning:React.FC = () => {
             
             <div className="space-y-6">
               {currentFocus.map((area, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6 border border-slate-100">
-                  <div className="flex items-start space-x-4">
-                    <div className="text-blue-600 mt-1">
-                      {area.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-slate-800 mb-2">
-                        {area.title}
-                      </h4>
-                      <p className="text-slate-600 mb-4">
-                        {area.description}
-                      </p>
-                      
-                      <div className="mb-4">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium text-slate-700">Progress</span>
-                          <span className="text-sm font-medium text-blue-600">{area.progress}%</span>
+                <FadeContent blur={true} duration={2500} easing="ease-out" initialOpacity={0.3}>       
+                    <div key={index} className="bg-slate-50 rounded-lg p-6 border border-slate-100">
+                      <div className="flex items-start space-x-4">
+                        <div className="text-blue-600 mt-1">
+                          {area.icon}
                         </div>
-                        <div className="w-full bg-slate-200 rounded-full h-2">
-                          <div
-                            className="bg-blue-600 h-2 rounded-full transition-all duration-500"
-                            style={{ width: `${area.progress}%` }}
-                          ></div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold text-slate-800 mb-2">
+                            {area.title}
+                          </h4>
+                          <p className="text-slate-600 mb-4">
+                            {area.description}
+                          </p>
+                          
+                          <div className="mb-4">
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-sm font-medium text-slate-700">Progress</span>
+                              <span className="text-sm font-medium text-blue-600">{area.progress}%</span>
+                            </div>
+                            <div className="w-full bg-slate-200 rounded-full h-2">
+                              <div
+                                className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+                                style={{ width: `${area.progress}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex flex-wrap gap-2">
+                            {area.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className="bg-white text-slate-600 px-2 py-1 rounded text-sm border border-slate-200"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                      
-                      <div className="flex flex-wrap gap-2">
-                        {area.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="bg-white text-slate-600 px-2 py-1 rounded text-sm border border-slate-200"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
                     </div>
-                  </div>
-                </div>
+                </FadeContent>
               ))}
             </div>
           </div>

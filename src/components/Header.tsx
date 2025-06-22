@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
+import BlurText from './ui/blurText.ui';
+import FadeContent from './ui/fadeContnet.ui';
 
 const Header:React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,13 +29,15 @@ const Header:React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
+        <FadeContent blur={true} duration={6500} easing="ease-out" initialOpacity={0}>       
           <div className="flex items-center space-x-2">
             <Code2 className="h-8 w-8 text-blue-600" />
             <span className="text-xl font-bold text-slate-800">Portfolio</span>
           </div>
+        </FadeContent>
 
           <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => {
@@ -42,7 +46,12 @@ const Header:React.FC = () => {
                 }
                 className="text-slate-600 hover:text-blue-600 font-medium transition-colors duration-200"
               >
-                {item.label}
+                <BlurText
+                  text={item.label}
+                  delay={100*(index+1)}
+                  animateBy="letters"
+                  direction="bottom"
+                  />
               </button>
             ))}
           </nav>

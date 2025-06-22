@@ -1,5 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import myCV from '../assets/resume.pdf'; 
+import BlurText from './ui/blurText.ui';
+import FadeContent from './ui/fadeContnet.ui';
 
 
 
@@ -25,21 +27,31 @@ const Hero:React.FC = () => {
     <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
+        <FadeContent blur={true} duration={6500} easing="ease-out" initialOpacity={0}>
           <div className="mb-8">
             <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
               DS
             </div>
           </div>
+          </FadeContent>
+          <BlurText
+            text="Senior Full-Stack Software Developer"
+            delay={550}
+            animateBy="words"
+            direction="top"
+            className="text-4xl md:text-6xl font-bold text-slate-800 mb-6"
+          />
+
           
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
-            Senior Full-Stack Software Developer
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Passionate about crafting elegant solutions and building scalable applications. 
-            With expertise in modern web technologies and a commitment to continuous learning.
-          </p>
-          
+          <BlurText 
+            className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+            text={"Passionate about crafting elegant solutions and building scalable applications. With expertise in modern web technologies and a commitment to continuous learning."}
+            delay={30}
+            animateBy="letters"
+            direction="bottom"
+
+          />
+          <FadeContent blur={true} duration={6500} easing="ease-out" initialOpacity={0}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button 
             onClick={handleScroolToProjects}
@@ -54,7 +66,8 @@ const Hero:React.FC = () => {
               <span>Download Resume</span>
             </button>
           </div>
-          
+          </FadeContent>
+          <FadeContent blur={true} duration={6500} easing="ease-out" initialOpacity={0}>       
           <div className="flex justify-center space-x-6">
             <a href="https://github.com/diouri844" 
               className="text-slate-600 hover:text-blue-600 transition-colors duration-200">
@@ -73,6 +86,7 @@ const Hero:React.FC = () => {
               <Mail className="h-6 w-6" />
             </a>
           </div>
+          </FadeContent>
         </div>
       </div>
     </section>
